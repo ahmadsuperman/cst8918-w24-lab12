@@ -17,12 +17,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to latest version
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2  # Assume v2 is the latest and compatible with Node.js 20
         with:
-          terraform_version: 1.0.0
+          terraform_version: 1.0.0  # Ensure this is the desired Terraform version
 
       - name: Terraform Init
         run: terraform init
